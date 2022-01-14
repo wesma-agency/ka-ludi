@@ -1,0 +1,311 @@
+.footer {
+	padding-top: 35px;
+	&__top {
+		background-color: #000;
+	}
+
+	&__top-wrap {
+		padding: 18px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__group-logo {
+	}
+
+	&__logo {
+	}
+
+	&__logo-text {
+	}
+
+	&__group-phone {
+		display: flex;
+		align-items: center;
+	}
+
+	&__group-contact {
+		margin-right: 55px;
+	}
+
+	&__phone {
+	}
+
+	&__time-work {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 22px;
+		color: #999999;
+	}
+
+	&__recall {
+	}
+
+	&__group-social {
+	}
+
+	&__social {
+	}
+
+	&__order {
+	}
+
+	&__middle {
+	}
+
+	&__middle-wrap {
+		padding: 40px 0;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__column {
+	}
+
+	&__group-addres {
+		margin-bottom: 40px;
+	}
+
+	&__addres {
+		margin-bottom: 10px;
+		position: relative;
+		padding-left: 30px;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 24px;
+		color: #000000;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+			left: 0;
+			width: 18px;
+			height: 18px;
+			background: url("../img/icon-location.svg") no-repeat;
+		}
+	}
+
+	&__map {
+		margin-left: 30px;
+	}
+
+	&__group-email {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&__email {
+		display: inline-block;
+		margin-bottom: 10px;
+		color: #000;
+		&::before {
+			filter: brightness(0);
+			opacity: 0.5;
+		}
+	}
+
+	&__order-service {
+		margin-left: 30px;
+		display: inline-block;
+	}
+
+	&__menu {
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 110px;
+	}
+
+	&__group-menu {
+	}
+
+	&__menu-name {
+		display: inline-block;
+		margin-bottom: 20px;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 29px;
+		color: #000000;
+	}
+
+	&__menu-list {
+		&.--two-column {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 90px;
+		}
+	}
+
+	&__menu-item {
+	}
+
+	&__menu-link {
+		font-size: 16px;
+		line-height: 32px;
+		color: #000000;
+	}
+
+	&__bottom {
+	}
+
+	&__bottom-wrap {
+		padding: 20px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-top: 1px solid rgba(51, 51, 51, 0.1);
+	}
+
+	&__policy {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 32px;
+		color: #999999;
+		& a {
+			color: #000;
+			text-decoration: underline;
+		}
+	}
+
+	&__group-develop {
+		display: flex;
+		align-items: center;
+	}
+
+	&__develop-text {
+		margin-right: 30px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 32px;
+		color: #999999;
+	}
+
+	&__develop-logo {
+	}
+}
+
+@media (max-width: 1175px) {
+	.footer {
+		&__logo {
+			margin-right: 0;
+		}
+
+		&__logo-text {
+			display: none;
+		}
+
+		&__menu {
+			grid-gap: 50px;
+		}
+
+		&__menu-list {
+			&.--two-column {
+				grid-column-gap: 30px;
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.footer {
+		&__top-wrap {
+			flex-wrap: wrap;
+		}
+
+		&__addres {
+			max-width: 250px;
+		}
+
+		&__group-logo {
+			flex-basis: 100%;
+			justify-content: center;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.footer {
+		padding-top: 20px;
+		&__top-wrap {
+			flex-direction: column;
+		}
+
+		&__row {
+			flex-direction: column;
+		}
+
+		&__column {
+			&:first-child {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				// margin-bottom: 20px;
+			}
+		}
+
+		&__menu {
+			display: none;
+		}
+
+		&__group-addres {
+			margin-bottom: 0;
+		}
+
+		&__order-service {
+			margin-left: 0;
+		}
+
+		&__map {
+			margin-left: 0;
+		}
+
+		&__group-contact {
+			margin-right: 25px;
+		}
+
+		&__group-phone {
+			margin-bottom: 10px;
+		}
+
+		&__group-social {
+			margin-bottom: 10px;
+		}
+
+		&__middle-wrap {
+			padding: 20px 0;
+		}
+
+		&__bottom-wrap {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&__policy {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.footer {
+		&__column:first-child {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&__group-addres {
+			margin-bottom: 20px;
+		}
+
+		&__menu {
+			grid-template-columns: 1fr;
+			grid-gap: 20px;
+		}
+	}
+}

@@ -1,0 +1,333 @@
+html.lock {
+	overflow: hidden;
+}
+
+body {
+	font-family: "Circe";
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 26px;
+	color: #000000;
+}
+
+body.lock {
+	overflow: hidden;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.container-one {
+	max-width: 1175px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.container-two {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+.title-h1,
+h1 {
+	font-weight: 800;
+	font-size: 60px;
+	line-height: 68px;
+	color: #ffffff;
+}
+
+.title-h2,
+h2 {
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 50px;
+	color: #000000;
+}
+
+.title-h3,
+h3 {
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 120%;
+	color: #333333;
+}
+
+.title-h4,
+h4 {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 120%;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	color: #333333;
+}
+
+.title-h5,
+h5 {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 120%;
+	color: #333333;
+}
+
+.title-h6,
+h6 {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 120%;
+	color: #333333;
+}
+
+.main-btn {
+	display: inline-block;
+	position: relative;
+	text-align: left;
+	max-width: 240px;
+	width: 100%;
+	padding: 26px 40px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 26px;
+	color: #222222;
+	border: 2px solid transparent;
+	background: #f1e748;
+	box-shadow: 0px 2px 25px rgba(241, 231, 72, 0.25);
+	border-radius: 100px;
+	transition: all 0.3s ease;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		right: 40px;
+		width: 16px;
+		height: 7px;
+		background: url("../img/button-arrow.svg") no-repeat;
+		filter: brightness(1);
+		transition: filter 0.3s ease;
+	}
+	&.--custom {
+		max-width: 320px;
+		border: 2px solid #f1e748;
+		background: none;
+		box-shadow: none;
+		color: #fff;
+		filter: drop-shadow(0px 2px 25px rgba(241, 231, 72, 0.25));
+		&::before {
+			filter: brightness(100);
+		}
+	}
+}
+
+.small-btn {
+	cursor: pointer;
+	padding: 5px 20px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 26px;
+	color: #222222;
+	background: #f1e748;
+	border: 2px solid #f1e748;
+	border-radius: 100px;
+	transition: all 0.3s ease;
+}
+
+@media (max-width: 1175px) {
+	.title-h1,
+	h1 {
+		@include adaptiv-font(60, 28);
+		line-height: 120%;
+	}
+
+	.title-h2,
+	h2 {
+		@include adaptiv-font(40, 20);
+		line-height: 120%;
+	}
+
+	.title-h3,
+	h3 {
+		@include adaptiv-font(30, 18);
+		line-height: 120%;
+	}
+
+	.title-h4,
+	h4 {
+		@include adaptiv-font(24, 18);
+		line-height: 120%;
+	}
+
+	.title-h5,
+	h5 {
+		@include adaptiv-font(16, 14);
+		line-height: 120%;
+	}
+
+	.title-h6,
+	h6 {
+		@include adaptiv-font(16, 14);
+		line-height: 120%;
+	}
+
+	.main-btn {
+		padding: 10px 20px;
+		max-width: 190px;
+		&::before {
+			right: 20px;
+		}
+		&.--custom {
+			max-width: 290px;
+		}
+	}
+}
+
+.pagination {
+    padding: 20px 0;
+    display: flex;
+    &__item {
+        margin-right: 12px;
+        & a {
+            padding: 15px 17px;
+            display: block;
+            border: 1px solid #f7f8fa;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 18px;
+            text-align: center;
+            color: #4f4f4f;
+        }
+        & span {
+            padding: 15px 17px;
+            display: block;
+            border: 1px solid #f7f8fa;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 18px;
+            text-align: center;
+            color: #4f4f4f;
+        }
+
+		&.current {
+			& a {
+				color: #000;
+				background: #f1e748;
+			}
+		}
+
+        &.--prev,
+        &.--next {
+            & a {
+                position: relative;
+                color: #000;
+                background: #f1e748;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 8px;
+                    height: 14px;
+                    top: 18px;
+                    background: url("../img/button-arrow-slider.svg") no-repeat;
+                }
+            }
+        }
+
+        &.--number {
+            & a {
+                &:hover {
+                    color: #000;
+                    background: #f1e748;
+                }
+            }
+        }
+
+        &.--prev {
+            & a {
+                padding: 15px 27px 15px 54px;
+                transition: all 0.3s ease;
+                &::before {
+                    left: 28px;
+					transform: rotate(180deg);
+                }
+            }
+            &:hover {
+                & a {
+                    background: #E8DE40;
+					box-shadow: 0px 2px 25px rgba(241, 231, 72, 0.25);
+                }
+            }
+        }
+
+        &.--next {
+            & a {
+                padding: 15px 54px 15px 27px;
+                transition: all 0.3s ease;
+                &::before {
+                    right: 28px;
+                }
+            }
+            &:hover {
+                & a {
+					background: #E8DE40;
+					box-shadow: 0px 2px 25px rgba(241, 231, 72, 0.25)
+                }
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .pagination {
+        &__item {
+            & a {
+                padding: 9px 11px;
+            }
+
+            & span {
+                padding: 9px 11px;
+            }
+
+            &.--prev {
+                & a {
+                    padding: 9px 15px;
+                    font-size: 0;
+                    &::before {
+                        top: 12px;
+                        left: 10px;
+                    }
+                }
+            }
+            &.--next {
+                & a {
+                    padding: 9px 15px;
+                    font-size: 0;
+                    &::before {
+                        top: 12px;
+                        right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .pagination {
+        &__item {
+            &:nth-child(4) {
+                display: none;
+            }
+            &:nth-child(5) {
+                display: none;
+            }
+            &:nth-child(6) {
+                display: none;
+            }
+        }
+    }
+}

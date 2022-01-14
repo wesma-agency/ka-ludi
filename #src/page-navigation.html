@@ -1,0 +1,67 @@
+@@include("components/_head.html") @@include("components/_header.html", {"class": "header --white"})
+
+<section class="page-navigation">
+    <div class="container-one">
+        <div class="page-navigation__wrap">
+            <div class="page-navigation__column">
+                <div class="page-navigation__name title-h2">Основные страницы</div>
+
+                <div class="page-navigation__lsit">
+                    <div class="page-navigation__item"><a href="./index.html">Главная</a>
+                    </div>
+
+                    <div class="page-navigation__item"><a href="./page-infomation.html">Информационная страница</a>
+                    </div>
+
+                    <div class="page-navigation__item"><a href="./page-news.html">Новости</a>
+                    </div>
+
+                    <div class="page-navigation__item"><a href="./page-recruitment-personnel.html">Подбор персонала</a>
+                    </div>
+
+                    <div class="page-navigation__item"><a href="./page-resource.html">Наши ресурсы</a>
+                    </div>
+
+                    <div class="page-navigation__item"><a href="./page-selection.html">Подбор кассиров</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-navigation__column">
+                <div class="page-navigation__name title-h2">Попапы</div>
+                <div class="page-navigation__lsit">
+                    <div class="page-navigation__item js-modal-show" data-popup="domain"><a href="order-call">Домены</a>
+                    </div>
+
+                    <div class="page-navigation__item js-modal-show" data-popup="order-call"><a
+                            href="order-call">Заказать звонок</a>
+                    </div>
+
+                    <div class="page-navigation__item js-modal-show" data-popup="order-service"><a
+                            href="order-service">Оставить заявку</a>
+                    </div>
+                </div>
+            </div>
+</section>
+
+<style>
+    .page-navigation__wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 50px 0;
+    }
+
+    .page-navigation__name {
+        margin-bottom: 20px;
+    }
+
+    .page-navigation__item {
+        margin-bottom: 20px;
+    }
+
+    .page-navigation__item a {
+        color: #000;
+    }
+</style>
+
+@@include("components/_footer.html")
